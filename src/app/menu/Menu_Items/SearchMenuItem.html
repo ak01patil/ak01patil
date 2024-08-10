@@ -1,0 +1,92 @@
+<div class="wrapper d-flex align-items-stretch">
+    <app-header></app-header>
+    <div id="content" class="p-4 p-md-5">
+        
+        <div class="container py-3 card">
+            <app-comman-toggel></app-comman-toggel>
+<div class="container">
+    <div class="row">
+        <div class="col l12 m12 s12">
+            <div class="col l2 m2 s2"></div>
+            <div class="heading col l8 m8 s8">
+                <span style="font-size: 25px;">Menu Item</span>
+            </div>
+            <div class="col l2 m2 s2"></div>
+        </div>
+
+        <div class="col l12 m12 s12 registerBgShadow">
+            <div class="row">
+                <div class="l12 m12 s12">
+                    <div class="row">
+                        <div class="col s2 l2 m2">
+                        </div>
+                        <div class="input-field col s3 l3 m3" style="text-align: right; margin-top: 30px;">
+                            <select (change)=" onSelect($event)">
+                                <option *ngFor="let type of searchtype" [value]="type.name">
+                                    {{type.name}}</option>
+                            </select>
+                        </div>
+                        <div class="input-field col s3 l3 m3" style="text-align: right;margin-top: 30px;">
+                            <input type="text" [(ngModel)]="model.txtserch" #name="ngModel" class="" id="search"
+                                data-toggle="tooltip" data-placement="top" title="Search Field">
+                            <!-- [(ngModel)]="model.txtserch"txtserch #name="ngModel" -->
+                            <label for="search">Type your Search</label>
+                        </div>
+
+                        <div class=" input-field col s4 l4 m4" style="margin-top: 10px;">
+                            <button type="button" (click)="btnsearch($event)"
+                                class="waves-effect waves-light btn">Go</button>
+                   
+                        </div>
+                    </div>
+
+
+
+                    <!-- style="height: 500px;overflow-y: scroll;margin-top: 35px;" -->
+                    <div class="row">
+                        <div class="col l12 m12 s12">
+                            <div class="col l12 m12 s12">
+
+                                <table>
+                                    <thead style="background: gainsboro;">
+                                        <th width="20" style="text-align: center">Module</th>
+                                        <th width="20" style="text-align: center">Page</th>
+                                        <th width="10" style="text-align: center">Menu Item</th>
+                                        <th width="30" style="text-align: center">Action</th>
+                                    </thead>
+                                    <tbody>
+                                        <tr
+                                            *ngFor="let lst of datalst  | paginate: { itemsPerPage: 10, currentPage: p }">
+                                            <td style="text-align: center">{{lst.modulename}}</td>
+                                            <td style="text-align: center">{{lst.pagename}}</td>
+                                            <td style="text-align: center">{{lst.itemname}}
+                                            </td>
+                                            <td style="text-align: center"> <span><img
+                                                        src="../../../assets/images/edit.png" (click)="btnedit(lst.id,lst.modulename,lst.pagename,lst.itemname)"
+                                                        data-toggle="tooltip" data-placement="top" title="Edit"
+                                                        width="20px"
+                                                        style="margin-bottom: 3px;" /></span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <span style="text-align:right">
+                                    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+                                </span>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>

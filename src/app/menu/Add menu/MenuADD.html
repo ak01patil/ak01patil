@@ -1,0 +1,90 @@
+<div class="wrapper d-flex align-items-stretch">
+  <app-header></app-header>
+  <div id="content" class="p-4 p-md-5">
+      
+      <div class="container py-3 card">
+          <app-comman-toggel></app-comman-toggel>
+<!-- <div class="wrapper d-flex align-items-stretch"> -->
+  <!-- <app-header></app-header> -->
+  <div id="content" class="p-4 p-md-5 pb-4">
+    <!-- <app-comman-toggel> </app-comman-toggel> -->
+    <div class="container py-3 card">
+
+      <div class="row">
+        <div class="col-md-12">
+
+          <form>
+            <div class="row">
+              <div class="col-md-12" style="text-align: center;">
+                <label style="align-items: center;font-size: 35px;"><b>{{menuname}}</b></label>
+                <!-- <b style="text-align: center; font-size: 14px;"> </b> -->
+              </div>
+            </div>
+            <div class="form-group row" class="row s12 l12 m12">
+
+              <div class="col-sm-6">
+                <label id="lable2" for="code1">Module Name</label>
+                <select (change)="onChangeModule($event)" *ngIf="!this.subpage" class="form-control">
+                  <option selected>Select Module</option>
+                  <option *ngFor="let menulb of modulelst" [value]="menulb.id"
+                    [selected]="menulb.name==model.modulename">
+                    {{menulb.name}}</option>
+                </select>
+
+                <input *ngIf="this.subpage" [(ngModel)]="model.pagename" #code="ngModel" type="text" id="Pagename"
+                  title="pagename" maxlength="25" name="pagename" class="form-control">
+                <label id="lable4" *ngIf="this.subpage" for="first2">Module Name </label>
+              </div>
+              <div class="col-sm-6">
+                <div *ngIf="!this.subpage">
+                  <label id="lable2" for="code1">Menu Name</label>
+                  <select id="menuname" name="menuname" (change)="onChangeMenu($event)" class="form-control">
+                    <option selected>Select Menu Item</option>
+                    <option *ngFor="let menulb of menuName" [selected]="menulb.dspname==model.pagename"
+                      [value]="menulb.id">
+                      {{menulb.dspname}}</option>
+                  </select>
+
+                </div>
+              </div>
+
+            </div>
+            <div class="form-group row">
+
+              <div class="input-field col s4 l4 m4">
+                <br>
+                <label id="lable4" for="first2">Sequence </label>
+                <input class="form-control" [(ngModel)]="model.sequence" #code="ngModel" type="number" name="sequence"
+                  title="Sequence" maxlength="35" (ngModelChange)="changeseq()">
+
+              </div>
+              <div class="input-field col l4 m4 s4" style="padding-left: 17px;">
+                <br>
+                <br>
+                <input [(ngModel)]="marked" #code1="ngModel" type="checkbox" class="" data-toggle="tooltip"
+                  appForbiddenName="bob" data-placement="center" title="submenu" id="submenu" name="submenu"
+                  (change)="toggleIssubmenu($event)"> &nbsp;Is sub menu
+              </div>
+              <div class="input-field col l4 m4 s4" style="text-align: center;" *ngIf="!this.subpage">
+                <br>
+                <br>
+                <input [(ngModel)]="landpage" #code1="ngModel" type="checkbox" class="" data-toggle="tooltip"
+                  appForbiddenName="bob" data-placement="center" title="landpage" id="landpage" name="landpage"
+                  (change)="togglelandpage($event)">&nbsp;Landing page
+              </div>
+
+
+            </div>
+
+          </form>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 mx-auto text-right mt-4 borderTop">
+          <button type="button" class="btn btn-primary mr-3 cancelBtn" (click)="cancle()"
+            data-dismiss="modal">Cancel</button>
+          <button type="button" (click)="btnsave()" class="btn btn-primary login-button-style">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -64,7 +64,7 @@ body {
   background-color: rgb(240,92,54);
   /* background-color: #031652; */
 
-  padding: 10px 0;
+  padding: 5px 0;
 }
 
 .hero_area .top_nav .contact_link-container {
@@ -86,7 +86,7 @@ body {
   color: #ffffff;
   font-size: 15px;
   padding: 0 25px;
-  border-right: 1px solid #ffffff;
+  border-right: 1px solid #1d42e6;
 }
 
 .hero_area .top_nav .contact_link-container a img {
@@ -112,7 +112,7 @@ body {
 
 .header_section .container-fluid {
   padding-right: 25px;
-  padding-left: 25px;
+  padding-left: 22px;
 }
 
 .header_section .nav_container {
@@ -867,3 +867,14 @@ list { display: none; }
 @media print { .hide, .show { display: none; } }
 /* end footer section*/
 /*# sourceMappingURL=style.css.map */
+
+/* .akshay{
+  font-size: 1.0rem;
+
+
+  text-decoration: underline;
+  text-decoration-color:#fc0909 ;
+  text-decoration-thickness: 5px; */
+
+/* } */
+  

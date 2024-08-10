@@ -1,0 +1,73 @@
+<div class="wrapper d-flex align-items-stretch">
+    <app-header></app-header>
+    <div id="content" class="p-4 p-md-5">
+        
+        <div class="container py-3 card">
+            <app-comman-toggel></app-comman-toggel>
+            
+    <div id="content" class="p-4 p-md-5">
+        <!-- <app-comman-toggel> </app-comman-toggel> -->
+             <div class="container py-3">
+            <div class="row">
+                <div class="col-md-10 mx-auto pr-0 pl-0">
+                    <form>
+                        <div class="form-group row">
+                            <div class="col-sm-12 d-flex">
+                                <input type="text" class="form-control" style="width:80%;"
+                                    placeholder="Search" name="searchText"
+                                    >&nbsp;&nbsp;
+                                <!-- <img src="./assets/images/refresh.svg" style="width: 25px; height: 25;"
+                                    (click)="loadonce()" class=" li srcBlackIcon ">&nbsp;&nbsp; -->
+                                <!-- <img src="./assets/images/searchIcon_black.svg" style="width: 25px; height: 25;"
+                                     class="li srcBlackIcon ">&nbsp;&nbsp; -->
+                                <button type="button" (click)="btnnew()"
+                                    class="btn btn-primary login-button-style">New</button>
+                            </div>
+                        </div>
+                        <div class="form-group row  mb-1">
+                            <div class="col-md-12 table-responsive">
+                                <table  id="myTableSeven" class="mb-0 table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>srno</th>
+                                            <th>Group</th>
+                                            <th> Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr
+                                        *ngFor="let lst of grouplst | paginate: { itemsPerPage: 10, currentPage: p }">
+                                            <td>{{lst.srno}}</td>
+                                            <td>{{lst.groupname}}</td>
+                                            <td>
+                                                <!-- <img src="./assets/images/edit.svg" alt="edit"
+                                                     (click)="btnedit(lst.id,lst.groupname)">&nbsp;&nbsp; -->
+
+                                                     <img src="./assets/images/puzzle.svg" alt="edit"
+                                                     (click)="btnmenu(lst.id,lst.groupname)">&nbsp;&nbsp;
+
+                                                     <!-- <i class="fa fa-puzzle-piece" aria-hidden="true"
+                                                     (click)="btnmenu(lst.id)"  ></i> -->
+                                                     <i class="fa fa-trash" 
+                                                   (click)="btndelet(lst.id)"></i>
+                                              
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                                <span style="text-align:right">
+                                    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+                                </span>
+                            </div>
+                            <div class="col-md-10 mx-auto pr-0 pl-0 text-right borderTop">
+                                <button type="button" class="btn btn-primary mr-3 cancelBtn" (click)=" cancel()"
+                                    data-dismiss="modal">Cancel</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- </div> -->

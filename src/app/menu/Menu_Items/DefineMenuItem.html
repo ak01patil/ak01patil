@@ -1,0 +1,54 @@
+<div class="wrapper d-flex align-items-stretch">
+    <app-header></app-header>
+    <div id="content" class="p-4 p-md-5">
+        
+        <div class="container py-3 card">
+            <app-comman-toggel></app-comman-toggel>
+<div class="container">
+    <div class="row">
+        <div class="col l12 m12 s12">
+            <div class="col l2 m2 s2"></div>
+            <div class="heading col l8 m8 s8">
+                <span style="font-size: 25px;">Menu Item</span>
+            </div>
+            <div class="col l2 m2 s2"></div>
+        </div>
+
+    
+        <div class="col l12 m12 s12 registerBgShadow">
+            <div class="row">
+                <div class="l12 m12 s12">
+                    <div class="row">
+                        <div class="col s2 l2 m2">
+                        </div>
+                        <div class="input-field col s4 l4 m4" style="font-size: 16px;">
+                         Module Name-  <b>{{model.modelname}}</b>
+                        </div>
+                        <div class="input-field col s4 l4 m4" style="font-size: 16px;">
+                         Page Name-   <b>{{model.pagename}}</b>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s2 l2 m2">
+                        </div>
+                        <div class="input-field col s4 l4 m4">
+                            <input type="text" [(ngModel)]="model.itemname" #itemname="ngModel" class="" id="search"
+                            data-toggle="tooltip" data-placement="top" title="Item Name">
+                          </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col l6 m6 s6" style="text-align: right">
+                    <button type="button" class="waves-ripple cancelbutton btn" style="margin-left: 5px;"
+                        (click)="btncancle()">Cancel</button>
+                </div>
+                <div class="input-field col l6 m6 s6" style="text-align: left">
+                    <button type="button" (click)="btnsave()" class="waves-ripple waves-light btn"
+                        style="margin-right: 5px;">Save</button>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+    </div>

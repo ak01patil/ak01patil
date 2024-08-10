@@ -1,0 +1,143 @@
+<div class="wrapper d-flex align-items-stretch">
+    <div class="wrapper d-flex align-items-stretch">
+        <!-- <app-header></app-header> -->
+        <div id="content" class="p-4 p-md-5">
+            
+            <div class="container py-3 card">
+                <!-- <app-comman-toggel></app-comman-toggel> -->
+                
+    <div id="content" class="p-4 p-md-5">
+        <!-- <app-comman-toggel></app-comman-toggel> -->
+
+    <!-- <div class="form-group row"> -->
+        <div class="col-sm-12 mb-3 d-flex p-0">
+            <div class="col-sm-8">
+                <span style="font-size: 25px;">User Group</span>
+            </div>
+            <div class="col-sm-4">
+                <div class="row">
+                    <div class="input-field col s3 l3 m3"
+                        style="text-align: right; margin-top: 27px;padding-left: 14px;">
+                        <select (change)=" onSelect($event)">
+                            <option *ngFor="let type of searchtype" [value]="type.name">
+                                {{type.name}}</option>
+                        </select>
+                    </div>
+                    <div class="input-field col s3 l3 m3" style="text-align: right; margin-top: 27px;">
+                        <!-- <input type="text" [(ngModel)]="model.txtserch" #name="ngModel" class="" id="search"
+                            data-toggle="tooltip" data-placement="top" title="Search Field"> -->
+                        <!-- [(ngModel)]="model.txtserch"txtserch #name="ngMoashu@1423
+                            del" -->
+                        <label for="search">Search Criteria</label>
+                    </div>
+                    <div class=" input-field col s4 l4 m4" style="margin-top: 27px;">
+                        <button type="button" (click)="btnsearch($event)"
+                            class="waves-effect waves-light btn">Go</button>&nbsp;&nbsp;
+                        <button type="button"  class="waves-effect waves-light btn"
+                            style="margin-left: 8px;">New</button>
+                    </div>
+                </div>
+
+            </div>
+        </div> 
+        <!-- <div class="container">
+            <div class="row">
+                <div class="col l12 m12 s12">
+                    <div class="col l2 m2 s2"></div>
+                    <div class="heading col l8 m8 s8">
+                        <span style="font-size: 25px;">User Group</span>
+                    </div>
+                    <div class="col l2 m2 s2"></div>
+                </div>
+                <div class="col l12 m12 s12 registerBgShadow">
+                    <div class="row" style="margin-left: 0px; margin-right: 0px;">
+                        <div class="l12 m12 s12">
+                            <!-- <div class="row"> -->
+                                <!-- <div class="input-field col s3 l3 m3"
+                                    style="text-align: right; margin-top: 27px;padding-left: 14px;">
+                                    <select (change)=" onSelect($event)">
+                                        <option *ngFor="let type of searchtype" [value]="type.name">
+                                            {{type.name}}</option>
+                                    </select>
+                                </div> -->
+                                <!-- <div class="input-field col s3 l3 m3" style="text-align: right; margin-top: 27px;">
+                                    <input type="text" [(ngModel)]="model.txtserch" #name="ngModel" class="" id="search"
+                                        data-toggle="tooltip" data-placement="top" title="Search Field">
+                                   
+                                    <label for="search">Search Criteria</label>
+                                </div> -->
+                                <!-- <div class=" input-field col s4 l4 m4" style="margin-top: 27px;">
+                                    <button type="button" (click)="btnsearch($event)"
+                                        class="waves-effect waves-light btn">Go</button>&nbsp;&nbsp;
+                                    <button type="button" (click)="btnnew(usergroup)"
+                                        class="waves-effect waves-light btn" style="margin-left: 8px;">New</button>
+                                </div> -->
+                            <!-- </div> -->
+                            <!-- style="height: 500px;overflow-y: scroll;margin-top: 35px;" -->
+                            <!-- <div class="row">
+                                <div class="col l12 m12 s12">
+
+                                    <table>
+                                        <thead style="background: gainsboro;">
+                                            <th width="10%" style="text-align: left">Sr.No</th>
+                                            <th width="75%" style="text-align: left">Group</th>
+                                            <th width="15%" style="text-align: left">Actions</th>
+                                        </thead>
+                                        <tbody>
+                                            <tr
+                                                *ngFor="let lst of grouplst  | paginate: { itemsPerPage: 10, currentPage: p }">
+                                                <td style="text-align: left">{{lst.srno}}</td>
+                                                <td style="text-align: left">{{lst.groupname}}</td>
+                                                <td style="text-align: left">
+                                                    <span><img src="../../../assets/images/edit.png"
+                                                            (click)="btnedit(lst.id,lst.groupname,usergroup)"
+                                                            data-toggle="tooltip" data-placement="top" title="Edit"
+                                                            width="20px"
+                                                            style="margin-bottom: 3px;" /></span>&nbsp;&nbsp;
+                                                    <span><img src="../../../assets/images/library.png"
+                                                            (click)="btnmenu(lst.id)" data-toggle="tooltip"
+                                                            data-placement="top" title="Edit" width="20px"
+                                                            style="margin-bottom: 3px;" /></span>&nbsp;&nbsp;
+                                                    <span><img src="../../../assets/images/delete.png"
+                                                            (click)="btndelet(lst.id)" data-toggle="tooltip"
+                                                            data-placement="top" title="Edit" width="20px"
+                                                            style="margin-bottom: 3px;" /></span>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <span style="text-align:right">
+                                        <pagination-controls (pageChange)="p = $event"></pagination-controls>
+                                    </span>
+                                </div>
+                            </div> -->
+                        <!-- </div> -->
+                    <!-- </div> -->
+                <!-- </div> -->
+            <!-- </div> -->
+        <!-- </div>  -->
+
+        <!-- <ng-template #usergroup>
+            <div class="col l12 m12 s12  modal-header" style="text-align: end"> -->
+                <!-- <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+                    <span aria-hidden="true">&times;</span>
+                </button> -->
+            <!-- </div> -->
+            <!-- <div class="modal-content registerBgShadow">
+                <h4>User Group</h4>
+                <div class=" col l12 m12 s12 " style="padding-left: 44px;padding-top: 21px;">
+                    <div class="input-field">
+                        <div class="input-field col l6 m6 s6 ">
+                            <input type="text" [(ngModel)]="model.updategroupname" #name="ngModel" class="" id="search"
+                                data-toggle="tooltip" data-placement="top" title="Search Field">
+                           
+                            <label id="lable1" for="search" class style="left: 0px;">User Group</label>
+                        </div>
+                        <div class=" col l12 m12 s12 " style="text-align: center;">
+                            <button type="button" (click)="btnadd($event)"
+                                class="waves-effect waves-light btn">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        <!-- </ng-template> -->

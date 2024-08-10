@@ -1,0 +1,76 @@
+<!-- <body> -->
+  <div class="wrapper d-flex align-items-stretch">
+    <app-header></app-header>
+    <div id="content" class="p-4 p-md-5">
+        
+        <div class="container py-3 card">
+            <app-comman-toggel></app-comman-toggel>
+            
+  <div id="content" class="p-4 p-md-5 pb-4">
+    <!-- <app-comman-toggel> </app-comman-toggel> -->
+    <div class="container py-3 card">
+
+      <div class="row">
+        <div class="col-md-12">
+
+          <form>
+  <!-- <div class="container py-3"> -->
+    <h2>Menu Tree View</h2>
+    <a><button type="button" (click)=" Add()" class="btn btn-primary mr-3 cancelBtn " data-dismiss="modal">Add</button>
+    </a>
+
+    <a><button type="button" (click)="Delete()" class="btn btn-primary mr-3 cancelBtn"
+        data-dismiss="modal">Delete</button></a>&nbsp;&nbsp;&nbsp;&nbsp;
+
+    <a><button type="button" (click)="Update()" class="btn btn-primary mr-3 cancelBtn " data-dismiss="modal">Update
+      </button> </a>
+      <div class="loader" style="position: absolute;top: 35%;left: 50%;" id="indicator" >
+         
+      </div>
+    <div>
+      
+
+
+      <label>Now Your Selected :</label><label> <B class="selected">{{model.selected}}</B></label>
+    </div>
+    <ul id="myUL" (click)="setvaluenode0()">
+      <li *ngFor="let node of nodes">
+        <span class="caret">{{node.name}}</span>
+        <ul class="nested">
+          <span *ngFor="let nodechildern of node.children">
+            <li *ngIf="nodechildern.issub==false"
+              (click)="setvaluenode(nodechildern.id,nodechildern.name,nodechildern.issub)">{{nodechildern.name}}
+            </li>
+            <li *ngIf="nodechildern.issub==true"
+              (click)="setvaluenode(nodechildern.id,nodechildern.name,nodechildern.issub)">
+              <span class="caret">{{nodechildern.name}}
+                <ul class="nested">
+                  <span *ngFor="let nodechildern1 of nodechildern.children">
+                    <li *ngIf="nodechildern1.issub==false"
+                      (click)="setvaluenode(nodechildern1.id,nodechildern1.name,nodechildern1.issub)">
+                      {{nodechildern1.name}}</li>
+                    <li *ngIf="nodechildern1.issub==true"><span class="caret"
+                        (click)="setvaluenode(nodechildern1.id,nodechildern1.name,nodechildern1.issub)">{{nodechildern1.name}}
+                        <ul class="nested">
+                          <li *ngFor="let nodechildern2 of nodechildern1.children"
+                            (click)="setvaluenode(nodechildern2.id,nodechildern2.name,nodechildern2.issub)">
+                            {{nodechildern2.name}}</li>
+                        </ul>
+                      </span>
+
+                    </li>
+                  </span>
+                </ul>
+
+              </span>
+            </li>
+          </span>
+        </ul>
+      </li>
+    </ul>
+  <!-- </div> -->
+  <!-- </div> -->
+
+
+
+<!-- </body> -->

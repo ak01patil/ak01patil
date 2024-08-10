@@ -1,0 +1,34 @@
+<div class="wrapper d-flex align-items-stretch">
+    <app-header></app-header>
+    <div id="content" class="p-4 p-md-5">
+        
+        <div class="container py-3 card">
+            <app-comman-toggel></app-comman-toggel>
+            
+<div id="content" class="p-4 p-md-5">
+    <!-- <app-comman-toggel></app-comman-toggel> -->
+    <div class="container py-3">
+        <div class="row">
+            <div class="col-md-10 mx-auto pr-0 pl-0">
+                <form>
+                    <div class="form-group row">
+                        <div class="col-md-10">
+                            <label class="form-label">User Group</label>
+                            <input type="text" class="form-control" placeholder="usergroup"
+                                [(ngModel)]="model.updategroupname" name="updategroupname" #name="ngModel"
+                                data-toggle="tooltip" data-placement="top" title="Search Field">
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-10 mx-auto pr-0 pl-0 text-right mt-4 borderTop">
+                <button type="button" class="btn btn-primary mr-3 cancelBtn" data-dismiss="modal"
+                    (click)=" cancle()">Cancel</button>
+                <button type="button" class="btn btn-primary login-button-style" (click)="btnadd()">Save</button>
+            </div>
+        </div>
+    </div>
+    <!-- </div> -->

@@ -1,0 +1,54 @@
+<div class="wrapper d-flex align-items-stretch">
+    <app-header></app-header>
+    <div id="content" class="p-4 p-md-5">
+        
+        <div class="container py-3 card">
+            <app-comman-toggel></app-comman-toggel>
+            
+<div id="content" class="p-4 p-md-5 pb-4">
+    <div class="container py-3 card">
+
+        <div class="row">
+            <div class="col-md-12">
+                <form>
+                    <div id="content" class="p-4 p-md-5">
+                        <div class="container py-3 card">
+                            <div class="row">
+                                <div class="col-md-12">
+
+                                    <form>
+                                        <div class="form-group row">
+                                            <div class="col-sm-12 mb-3 d-flex p-0">
+                                                <div class="col-sm-8">
+                                                    <select class="form-control" (change)="onSelectuser($event)">
+                                                        <option>Resource Name</option>
+                                                        <option *ngFor=" let type of lstuser" [value]="type.id">
+                                                            {{type.name}} </option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <button type="button" class="btn btn-primary "
+                                                        (click)="btngo()">GO</button>&nbsp;&nbsp;
+                                                    <button type="button" class="btn btn-primary mr-3 cancelBtn"
+                                                        data-dismiss="modal" (click)="getPagename('Dashboard')"
+                                                        (click)="cancle()">Cancel</button>
+
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+
+                                    </form>
+
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
